@@ -82,7 +82,7 @@ ticket_medio
 ```
 
 ```Python
-ticket__por_categoria = merge_tabelas.groupby('categoria')['faturamento'].mean()
+ticket_por_categoria = merge_tabelas.groupby('categoria')['faturamento'].mean()
 ticket_por_categoria
 ```
 
