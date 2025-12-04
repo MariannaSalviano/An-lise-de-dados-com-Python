@@ -110,9 +110,7 @@ ranking_vendas_dia
 bins = [18, 25, 35, 50]
 labels = ['18-25', '26-35', '36-50']
 merge_tabelas['faixa_etaria'] = pd.cut(merge_tabelas['idade'], bins=bins, labels=labels)
-```
 
-```Python
 vendas_por_faixaetaria = merge_tabelas.groupby('faixa_etaria')['faturamento'].sum()
 vendas_por_faixaetaqria
 ```
