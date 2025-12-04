@@ -26,7 +26,7 @@ Este projeto simula uma operação real de vendas, unificando informações de *
 ## 📁 Estrutura do Repositório
 
 
-```
+```python
 import pandas as pd
 ```
 
