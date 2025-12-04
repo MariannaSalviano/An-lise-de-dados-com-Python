@@ -71,7 +71,7 @@ plt.show()
 ```Python
 top = merge_tabelas.groupby('nome')['lucro_total'].sum().sort_values(ascending=False).head(5)
 top.plot(kind='barh', figsize=(8,4), color='gray')
-plt.title('Top 5 Clientes Mais Lucrativos')
+plt.title('Ranking dos 5 Clientes Mais Lucrativos')
 plt.xlabel('Lucro Total')
 plt.show()
 ```
@@ -82,28 +82,28 @@ ticket_medio
 ```
 
 ```Python
-ticket_categoria = merge_tabelas.groupby('categoria')['faturamento'].mean()
-ticket_categoria
+ticket__por_categoria = merge_tabelas.groupby('categoria')['faturamento'].mean()
+ticket_por_categoria
 ```
 
 ```Python
-freq_clientes = merge_tabelas['nome'].value_counts()
-freq_clientes
+frequencia_compras_por_cliente = merge_tabelas['nome'].value_counts()
+frequencia_compras_por_cliente
 ```
 
 ```Python
-LTV = merge_tabelas.groupby('nome')['faturamento'].sum().sort_values(ascending=False)
-LTV
+lifetime_value = merge_tabelas.groupby('nome')['faturamento'].sum().sort_values(ascending=False)
+lifetime_value
 ```
 
 ```Python
-produtos_mais_vendidos = merge_tabelas.groupby('nome_produto')['quantidade'].sum().sort_values(ascending=False)
-produtos_mais_vendidos
+ranking_produtos_mais_vendidos = merge_tabelas.groupby('nome_produto')['quantidade'].sum().sort_values(ascending=False)
+ranking_produtos_mais_vendidos
 ```
 
 ```Python
-mais_vendas_dia = merge_tabelas.groupby('data_venda')['quantidade'].sum().sort_values(ascending=False)
-mais_vendas_dia
+ranking_vendas_dia = merge_tabelas.groupby('data_venda')['quantidade'].sum().sort_values(ascending=False)
+ranking_vendas_dia
 ```
 
 ```Python
@@ -113,18 +113,18 @@ merge_tabelas['faixa_etaria'] = pd.cut(merge_tabelas['idade'], bins=bins, labels
 ```
 
 ```Python
-vendas_por_faixa = merge_tabelas.groupby('faixa_etaria')['faturamento'].sum()
-vendas_por_faixa
+vendas_por_faixaetaria = merge_tabelas.groupby('faixa_etaria')['faturamento'].sum()
+vendas_por_faixaetaqria
 ```
 
 ```Python
-top3 = merge_tabelas.groupby('categoria')['lucro_total'].sum().nlargest(3)
-top3
+ranking_categoria_mais_rentavel = merge_tabelas.groupby('categoria')['lucro_total'].sum().nlargest(3)
+ranking_categoria_mais_rentavel
 ```
 
 ```Python
-participacao = merge_tabelas.groupby('categoria')['faturamento'].sum()
-participacao / participacao.sum() * 100
+participacao_por_categoria = merge_tabelas.groupby('categoria')['faturamento'].sum()
+participacao_por_categoria / participacao_por_categoria.sum() * 100
 ```
 
 ```Python
