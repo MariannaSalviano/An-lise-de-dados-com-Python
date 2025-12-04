@@ -26,9 +26,9 @@ Este projeto simula uma operação real de vendas, unificando informações de *
 ## 📁 Estrutura do Repositório
 
 
-
+```sql
 import pandas as pd
-
+```
 
 vendas = pd.read_csv('/content/Vendas.txt')
 clientes = pd.read_csv('/content/Clientes.txt')
