@@ -1,6 +1,3 @@
-# Análise de dados com Python
-Projetos de análise de dados com Python e bibliotecas como Pandas e Matplotlib.
-
 # 🧠 Análise Inteligente de Vendas com Python + Pandas + Matplotlib
 Um projeto completo de análise de dados desenvolvido no **Google Colab** utilizando **Python**, **Pandas** e **Matplotlib**.  
 O objetivo é demonstrar habilidades sólidas em manipulação de dados, integração de múltiplas bases, criação de métricas avançadas e visualizações de insights.
@@ -112,7 +109,7 @@ labels = ['18-25', '26-35', '36-50']
 merge_tabelas['faixa_etaria'] = pd.cut(merge_tabelas['idade'], bins=bins, labels=labels)
 
 vendas_por_faixaetaria = merge_tabelas.groupby('faixa_etaria')['faturamento'].sum()
-vendas_por_faixaetaqria
+vendas_por_faixaetaria
 ```
 
 ```Python
